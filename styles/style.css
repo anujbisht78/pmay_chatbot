@@ -1,0 +1,735 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+/* ==========================================
+   GLOBAL
+========================================== */
+
+html,
+body,
+[class*="css"] {
+
+    font-family:
+        'Inter',
+        sans-serif;
+}
+
+
+/* ==========================================
+   APP BACKGROUND
+========================================== */
+
+.stApp {
+
+    background:
+        linear-gradient(
+            180deg,
+            #eef3f8 0%,
+            #f9fbfd 100%
+        );
+
+    color:
+        #1f1f1f;
+}
+/* ==========================================
+   PMAY BANNER
+========================================== */
+
+img {
+
+    border-radius:
+        18px;
+
+    margin-bottom:
+        15px;
+
+    box-shadow:
+        0 6px 18px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.main-header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b5394,
+            #073763
+        );
+
+    padding:
+        28px;
+
+    border-radius:
+        22px;
+
+    color:
+        white;
+
+    margin-bottom:
+        30px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(
+            0,
+            0,
+            0,
+            0.15
+        );
+}
+
+.main-header h1 {
+
+    margin:
+        0;
+
+    font-size:
+        34px;
+
+    font-weight:
+        700;
+}
+
+.main-header p {
+
+    margin-top:
+        10px;
+
+    opacity:
+        0.92;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.7;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+section[data-testid="stSidebar"] {
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b5394,
+            #073763
+        );
+
+    border-right:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+}
+
+section[data-testid="stSidebar"] * {
+
+    color:
+        white !important;
+}
+
+
+/* ==========================================
+   WELCOME CARD
+========================================== */
+
+.welcome-card {
+
+    background:
+        white;
+
+    border-radius:
+        22px;
+
+    padding:
+        30px;
+
+    margin-bottom:
+        25px;
+
+    border-left:
+        7px solid
+        #0b5394;
+
+    box-shadow:
+        0 6px 20px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+.welcome-card h2 {
+
+    margin-top:
+        0;
+}
+
+.welcome-card ul {
+
+    padding-left:
+        22px;
+}
+
+
+/* ==========================================
+   CHAT WRAPPER
+========================================== */
+
+.chat-wrapper {
+
+    animation:
+        fadeIn 0.35s ease;
+
+    margin-bottom:
+        15px;
+}
+
+
+/* ==========================================
+   USER CHAT
+========================================== */
+
+.user-container {
+
+    display:
+        flex;
+
+    justify-content:
+        flex-end;
+
+    align-items:
+        flex-end;
+
+    gap:
+        10px;
+}
+
+.user-message {
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8ebff,
+            #b9dbff
+        );
+
+    padding:
+        14px 18px;
+
+    border-radius:
+        20px;
+
+    border-bottom-right-radius:
+        6px;
+
+    max-width:
+        75%;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.6;
+
+    color:
+        #111827;
+
+    box-shadow:
+        0 4px 14px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+/* ==========================================
+   BOT CHAT
+========================================== */
+
+.bot-container {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        10px;
+}
+
+.bot-message {
+
+    background:
+        white;
+
+    padding:
+        16px 20px;
+
+    border-radius:
+        20px;
+
+    border-bottom-left-radius:
+        6px;
+
+    border-left:
+        5px solid
+        #0b5394;
+
+    max-width:
+        75%;
+
+    color:
+        #111827;
+
+    line-height:
+        1.7;
+
+    box-shadow:
+        0 4px 14px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+/* ==========================================
+   AVATARS
+========================================== */
+
+.avatar {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        18px;
+
+    flex-shrink:
+        0;
+}
+
+.bot-avatar {
+
+    background:
+        #0b5394;
+
+    color:
+        white;
+}
+
+.user-avatar {
+
+    background:
+        #2563eb;
+
+    color:
+        white;
+}
+
+
+/* ==========================================
+   TIMESTAMP
+========================================== */
+
+.timestamp {
+
+    font-size:
+        11px;
+
+    color:
+        #6b7280;
+
+    margin-top:
+        8px;
+
+    text-align:
+        right;
+}
+
+
+/* ==========================================
+   SUGGESTION BOX
+========================================== */
+
+.suggestion-box {
+
+    background:
+        white;
+
+    border-left:
+        5px solid
+        #0b5394;
+
+    border-radius:
+        18px;
+
+    padding:
+        18px;
+
+    margin-top:
+        10px;
+
+    margin-bottom:
+        15px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+div.stButton > button {
+
+    width:
+        100%;
+
+    border-radius:
+        14px;
+
+    min-height:
+        3.2em;
+
+    background:
+        white;
+
+    border:
+        1px solid
+        #d8dee8;
+
+    font-weight:
+        500;
+
+    transition:
+        all 0.25s ease;
+
+    box-shadow:
+        0 2px 8px
+        rgba(
+            0,
+            0,
+            0,
+            0.05
+        );
+}
+
+div.stButton > button:hover {
+
+    border:
+        1px solid
+        #0b5394;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(
+            11,
+            83,
+            148,
+            0.18
+        );
+
+    color:
+        #0b5394;
+}
+
+
+/* ==========================================
+   CHAT INPUT
+========================================== */
+
+.stChatInput {
+
+    position:
+        sticky;
+
+    bottom:
+        0;
+
+    z-index:
+        999;
+
+    padding-top:
+        12px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.82
+        );
+
+    backdrop-filter:
+        blur(14px);
+}
+
+.stChatInput input {
+
+    border-radius:
+        18px !important;
+
+    padding:
+        14px !important;
+
+    border:
+        1px solid
+        #d9e2ec !important;
+}
+
+
+/* ==========================================
+   TYPING ANIMATION
+========================================== */
+
+.typing {
+
+    display:
+        flex;
+
+    gap:
+        6px;
+
+    margin:
+        10px 0;
+}
+
+.typing span {
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    border-radius:
+        50%;
+
+    background:
+        #0b5394;
+
+    animation:
+        typingBounce
+        1.3s infinite;
+}
+
+.typing span:nth-child(2) {
+
+    animation-delay:
+        0.2s;
+}
+
+.typing span:nth-child(3) {
+
+    animation-delay:
+        0.4s;
+}
+
+@keyframes typingBounce {
+
+    0%,
+    80%,
+    100% {
+        transform:
+            scale(0);
+    }
+
+    40% {
+        transform:
+            scale(1);
+    }
+}
+
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+
+    width:
+        10px;
+}
+
+::-webkit-scrollbar-track {
+
+    background:
+        #edf2f7;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        #b7c4d5;
+
+    border-radius:
+        10px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .main-header h1 {
+
+        font-size:
+            26px;
+    }
+
+    .main-header p {
+
+        font-size:
+            14px;
+    }
+
+    .user-message,
+    .bot-message {
+
+        max-width:
+            95%;
+    }
+
+    .welcome-card {
+
+        padding:
+            22px;
+    }
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+@media (
+    prefers-color-scheme:
+    dark
+) {
+
+    .stApp {
+
+        background:
+            #121212;
+    }
+
+    .bot-message {
+
+        background:
+            #1f2937;
+
+        color:
+            #f3f4f6;
+    }
+
+    .user-message {
+
+        background:
+            #1e40af;
+
+        color:
+            white;
+    }
+
+    .welcome-card {
+
+        background:
+            #1f2937;
+
+        color:
+            white;
+    }
+
+    .suggestion-box {
+
+        background:
+            #1f2937;
+
+        color:
+            white;
+    }
+}
