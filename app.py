@@ -92,7 +92,7 @@ if st.session_state.quick_query:
 # ==========================================
 
 st.image(
-    "assests\pmay_logo_2.png",
+    "assests/pmay_logo_2.png",
     use_container_width=True
 )
 
