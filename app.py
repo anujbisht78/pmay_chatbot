@@ -6,7 +6,13 @@ from chatbot import chatbot, detect_guided_flow
 from guided_flow import (
     CONTEXT_RESPONSES,GUIDED_FLOWS
 )
+from eligibility_checker import (
+    init_eligibility_state,
+    start_eligibility_wizard,
+    render_eligibility_wizard
+)
 
+init_eligibility_state()
 
 
 # ==========================================
@@ -67,7 +73,6 @@ if "pending_query" not in st.session_state:
 
 if "guided_context" not in st.session_state:
     st.session_state.guided_context = None
-
 
 
 # ==========================================
@@ -217,6 +222,32 @@ if not st.session_state.chat_started:
                 )
 
                 st.rerun()
+
+
+# ==========================================
+# ELIGIBILITY CHECKER
+# ==========================================
+
+if not st.session_state.chat_started:
+
+    st.markdown("""
+    <div class='eligibility-box'>
+    <h4>🏠 Check Your PMAY-U 2.0 Eligibility</h4>
+    Get a quick eligibility estimate in less than 1 minute.
+    </div>
+    """,
+    unsafe_allow_html=True)
+
+    if st.button(
+        "🏠 Check Your Eligibility",
+        use_container_width=True
+    ):
+        start_eligibility_wizard()
+
+# Show wizard only when active
+if st.session_state.eligibility_wizard["active"]:
+
+    render_eligibility_wizard()
 
 
 # ==========================================
@@ -540,6 +571,9 @@ if typed_query:
 if user_query:
 
     st.session_state.chat_started = True
+    if "eligibility_wizard" in st.session_state:
+
+        st.session_state.eligibility_wizard["active"] = False
 
     # --------------------------------------
     # MANUAL OPTION SELECTION
